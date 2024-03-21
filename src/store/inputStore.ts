@@ -1,5 +1,5 @@
 import {create} from 'zustand'
-import { UniqueOption} from "../utils/types/common.types";
+import {UniqueOption} from "../utils/types/common.types";
 
 interface InputState {
     inputValue: string
@@ -17,8 +17,8 @@ export const useInputStore = create<InputState>()((set) => ({
     inputValue: "",
     computedValue: 0,
     isError: false,
-    setIsError: (newValue) => set((state) => ({isError: newValue})),
-    setComputedValue: (newValue) => set((state) => ({computedValue: newValue})),
-    setSelectedOptions: (newValue) => set((state) => ({selectedOptions: newValue})),
-    setInputValue: (newValue) => set((state) => ({inputValue: newValue})),
+    setIsError: (newValue) => set({isError: newValue}),
+    setComputedValue: (newValue) => set({computedValue: newValue}),
+    setSelectedOptions: (newValue) => set({selectedOptions: newValue}),
+    setInputValue: (newValue) => set({inputValue: newValue}),
 }))
