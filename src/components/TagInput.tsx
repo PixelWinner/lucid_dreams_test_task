@@ -59,7 +59,7 @@ const TagInput = () => {
         ));
 
     const noOptionsText = isLoading ? "Loading..." : "No matches";
-    console.log(selectedOptions)
+
     return (
         <Autocomplete
             sx={{minWidth: "600px"}}
