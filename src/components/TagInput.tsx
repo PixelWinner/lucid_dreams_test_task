@@ -27,7 +27,6 @@ const TagInput = () => {
         const expression = selectedOptions.map(option =>
             typeof option === 'string' ? option : option.value
         ).join('');
-console.log(expression)
 
         try {
             const result = eval(expression);
